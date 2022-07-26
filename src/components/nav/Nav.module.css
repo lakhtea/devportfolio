@@ -1,0 +1,30 @@
+.container {
+  font-size: clamp(2rem, 5vw, 6rem);
+  padding: 1rem;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button:hover {
+  color: red;
+}
+
+.selected-button {
+  background-color: red;
+}
+
+@media screen and (min-width: 50em) {
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .list {
+    flex-direction: column;
+  }
+}

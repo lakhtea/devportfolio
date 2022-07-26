@@ -1,0 +1,15 @@
+.container {
+  min-height: 100%;
+  padding: 1rem;
+  background: linear-gradient(to bottom, #042120, #045552, #042120);
+  color: #ffffffe0;
+}
+
+@media screen and (min-width: 50em) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
+    align-items: center;
+  }
+}
