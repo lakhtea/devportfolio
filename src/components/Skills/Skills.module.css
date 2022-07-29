@@ -1,0 +1,15 @@
+.technologies {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.item {
+  padding: 1rem;
+  background-color: black;
+}

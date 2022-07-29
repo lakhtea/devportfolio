@@ -2,7 +2,6 @@
   height: 100%;
   padding: 2rem;
   overflow-y: scroll;
-  font-size: clamp(1rem, 3vw, 3rem);
   display: flex;
   flex-direction: column;
   gap: max(1rem, 2vw);

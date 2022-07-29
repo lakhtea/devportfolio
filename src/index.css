@@ -1,17 +1,28 @@
+:root {
+  --link: #6fd2ff;
+  --light: #6fd1ff34;
+  --text: #e5e5e5;
+}
+
 html,
 body,
 #root {
   height: 100%;
   font-size: 62.5%;
+  color: var(--text);
 }
 
 body {
   margin: 0;
-  font-family: "Righteous", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body.blur .content > * {
+  filter: blur(5px) brightness(0.7);
 }
 
 * {

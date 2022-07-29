@@ -1,8 +1,9 @@
 import styles from "./Nav.module.css";
 
-const Nav = () => {
+const Nav = ({ setPage }) => {
   const { container, list, button } = styles;
   const navLinks = [
+    { name: "About" },
     { name: "Projects" },
     { name: "Skills" },
     { name: "Contact" },
@@ -13,7 +14,9 @@ const Nav = () => {
       <ul className={list}>
         {navLinks.map(({ name }) => (
           <li>
-            <button className={button}>{name}</button>
+            <button onClick={() => setPage(name)} className={button}>
+              {name}
+            </button>
           </li>
         ))}
       </ul>

@@ -1,0 +1,7 @@
+.container {
+  font-size: clamp(2rem, 5vw, 6rem);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
