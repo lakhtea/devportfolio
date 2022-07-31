@@ -9,6 +9,7 @@ const MenuIcon = () => {
   const handleClick = () => {
     setMenuOpen(!menuOpen);
     document.querySelector("body").classList.toggle("blur");
+    document.querySelector("html").classList.toggle("scrollbar-hidden");
   };
 
   return (

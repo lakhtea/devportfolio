@@ -5,11 +5,3 @@
   align-items: center;
   gap: 1rem;
 }
-
-.button:hover {
-  color: red;
-}
-
-.selected-button {
-  background-color: red;
-}

@@ -5,9 +5,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 3rem;
-}
-
-.svgContainer:hover {
-  box-shadow: 0 0 10px 5px var(--link);
 }

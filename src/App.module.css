@@ -1,5 +1,4 @@
 .container {
-  height: 100%;
   overflow: hidden;
   padding: 3rem 2rem 0;
   background: var(--background);

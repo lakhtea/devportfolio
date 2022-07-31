@@ -6,20 +6,14 @@
   height: 5rem;
   width: 5rem;
   gap: 1rem;
-
   padding: 1rem;
-  border-radius: 3rem;
-}
-
-.container:hover {
-  box-shadow: 0 0 10px 5px var(--link);
 }
 
 .bar {
   width: 3rem;
   height: 0.2rem;
   background-color: var(--link);
-  border-radius: min(10rem, 100px);
+  border-radius: 100rem;
   transition: ease 0.5s;
 }
 
