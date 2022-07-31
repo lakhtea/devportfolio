@@ -8,7 +8,7 @@ const Skills = () => {
   const other = ["AWS", "Heroku", "Webpack"];
 
   return (
-    <div>
+    <div id="Skills">
       Technologies:
       <div className={technologies}>
         <div>

@@ -61,7 +61,7 @@ const Projects = () => {
   ];
 
   return (
-    <ul className={container}>
+    <ul id="Projects" className={container}>
       {projects.map(
         ({ imgSrc, title, description, technologies, mainColor }) => (
           <li style={{ borderColor: mainColor }} className={card}>

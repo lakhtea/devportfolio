@@ -4,18 +4,12 @@ import { useContext } from "react";
 
 const MenuIcon = () => {
   const { container, bar, active } = styles;
-  const { menuOpen, setMenuOpen } = useContext(MenuContext);
-
-  const handleClick = () => {
-    setMenuOpen(!menuOpen);
-    document.querySelector("body").classList.toggle("blur");
-    document.querySelector("html").classList.toggle("scrollbar-hidden");
-  };
+  const { menuOpen, handleMenuToggle } = useContext(MenuContext);
 
   return (
     <button
-      onClick={handleClick}
-      className={`${container} ${menuOpen && active}`}
+      onClick={handleMenuToggle}
+      className={`${container} ${menuOpen && active} menu-el`}
     >
       <div className={bar}></div>
       <div className={bar}></div>

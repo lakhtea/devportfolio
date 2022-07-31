@@ -4,7 +4,7 @@ import styles from "./Menu.module.css";
 
 const Menu = () => {
   const { container, open, list, item, button } = styles;
-  const { menuOpen, setMenuOpen, setPage } = useContext(MenuContext);
+  const { menuOpen, handleMenuToggle } = useContext(MenuContext);
 
   const navLinks = [
     { name: "About" },
@@ -13,21 +13,19 @@ const Menu = () => {
     { name: "Contact" },
   ];
 
-  const handleClick = (name) => {
-    setMenuOpen(!menuOpen);
-    setPage(name);
-    document.querySelector("body").classList.toggle("blur");
-    document.querySelector("html").classList.toggle("scrollbar-hidden");
-  };
-
   return (
-    <div className={`${container} ${menuOpen && open} menu`}>
-      <ul className={list}>
+    <div className={`${container} ${menuOpen && open} menu menu-el`}>
+      <ul className={`${list} menu-el`}>
         {navLinks.map(({ name }) => (
-          <li key={name} className={item}>
-            <button onClick={() => handleClick(name)} className={button}>
+          <li key={name} className={`${item} menu-el`}>
+            <a
+              href={`#${name}`}
+              onClick={() => handleMenuToggle()}
+              className={`${button} menu-el`}
+              disabled={!menuOpen}
+            >
               {name}
-            </button>
+            </a>
           </li>
         ))}
       </ul>

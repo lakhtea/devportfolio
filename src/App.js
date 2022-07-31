@@ -10,15 +10,24 @@ export const MenuContext = createContext();
 function App() {
   const { container } = styles;
 
-  const [page, setPage] = useState("About");
   const [menuOpen, setMenuOpen] = useState(false);
+  const handleMenuToggle = (close) => {
+    close === true ? setMenuOpen(false) : setMenuOpen(!menuOpen);
+    document.querySelector("body").classList.toggle("blur");
+    document.querySelector("html").classList.toggle("scrollbar-hidden");
+  };
+
+  const handleClickOutside = (e) => {
+    if (!e.target.classList.contains("menu-el") && menuOpen)
+      handleMenuToggle(null, true);
+  };
 
   return (
-    <div className={container}>
-      <MenuContext.Provider value={{ menuOpen, setMenuOpen, page, setPage }}>
-        <Header setPage={setPage} />
+    <div onClick={handleClickOutside} className={container}>
+      <MenuContext.Provider value={{ menuOpen, handleMenuToggle }}>
+        <Header />
         <Hero />
-        <Content page={page} />
+        <Content />
         <Menu />
       </MenuContext.Provider>
     </div>

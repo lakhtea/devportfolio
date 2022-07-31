@@ -60,7 +60,7 @@ body.blur {
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-  scrollbar-color: var(--link) var(--background);
+  scrollbar-color: var(--light) var(--background);
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -78,6 +78,11 @@ button {
 
 button:hover {
   box-shadow: 0 0 10px 5px var(--link);
+}
+
+button:disabled:hover {
+  box-shadow: none;
+  cursor: default;
 }
 
 code {
