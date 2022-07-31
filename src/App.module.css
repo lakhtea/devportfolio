@@ -1,7 +1,9 @@
 .container {
-  min-height: 100%;
-  padding: 1rem;
-  /* background: linear-gradient(to bottom, #042120, #045552, #042120);
-   */
-  background: linear-gradient(-45deg, #162c35 70%, #0c252f 100%);
+  height: 100%;
+  overflow: hidden;
+  padding-top: 2rem;
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
