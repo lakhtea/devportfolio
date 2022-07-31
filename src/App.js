@@ -1,6 +1,6 @@
 import styles from "./App.module.css";
 import Header from "./components/Header/Header";
-// import Content from "./components/Content/Content";
+import Content from "./components/Content/Content";
 import Menu from "./components/Menu/Menu";
 import { useState, createContext } from "react";
 
@@ -16,7 +16,7 @@ function App() {
     <div className={container}>
       <MenuContext.Provider value={{ menuOpen, setMenuOpen }}>
         <Header setPage={setPage} />
-        {/* <Content page={page} /> */}
+        <Content page={page} />
         <Menu />
       </MenuContext.Provider>
     </div>
