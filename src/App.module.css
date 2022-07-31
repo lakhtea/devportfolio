@@ -1,9 +1,10 @@
 .container {
   height: 100%;
   overflow: hidden;
-  padding-top: 2rem;
+  padding: 3rem 2rem 0;
   background: var(--background);
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   position: relative;
 }

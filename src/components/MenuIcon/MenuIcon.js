@@ -12,11 +12,14 @@ const MenuIcon = () => {
   };
 
   return (
-    <div onClick={handleClick} className={`${container} ${menuOpen && active}`}>
+    <button
+      onClick={handleClick}
+      className={`${container} ${menuOpen && active}`}
+    >
       <div className={bar}></div>
       <div className={bar}></div>
       <div className={bar}></div>
-    </div>
+    </button>
   );
 };
 

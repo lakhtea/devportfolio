@@ -2,8 +2,9 @@
   --link: #6fd2ff;
   --light: #6fd1ff34;
   --text: #e5e5e5;
-  --background: linear-gradient(-45deg, #162c35 70%, #0c252f 100%);
+  --background: black;
 }
+/* --background: black; linear-gradient(-45deg, #162c35 70%, #0c252f 100%);*/
 
 html,
 body,
@@ -22,7 +23,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body.blur .content > * {
+body.blur .content > *:not(.menu) {
   filter: blur(5px) brightness(0.7);
 }
 
@@ -31,6 +32,7 @@ body.blur .content > * {
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button {

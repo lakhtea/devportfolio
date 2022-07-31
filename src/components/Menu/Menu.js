@@ -8,7 +8,7 @@ const Menu = () => {
   const { menuOpen } = useContext(MenuContext);
 
   return (
-    <div className={`${container} ${menuOpen && open}`}>
+    <div className={`${container} ${menuOpen && open} menu`}>
       <Nav />
     </div>
   );
