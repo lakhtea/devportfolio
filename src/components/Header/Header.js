@@ -31,7 +31,7 @@ const Header = () => {
       setScrollingUp(false);
     }
 
-    if (window.scrollY === 0) {
+    if (window.scrollY <= 0) {
       setScrollingUp(true);
       setIsTop(true);
     }

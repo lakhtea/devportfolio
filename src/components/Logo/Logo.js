@@ -1405,7 +1405,10 @@ export default function Logo() {
             !document.createElementNS
           )
             return {};
-          var t = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+          var t = document.createElementNS(
+            "https://www.w3.org/2000/svg",
+            "svg"
+          );
           return t && t.style
             ? ((t.style.position = "absolute"),
               (t.style.opacity = "0.01"),
@@ -3714,7 +3717,10 @@ export default function Logo() {
             !document.createElementNS
           )
             return {};
-          var t = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+          var t = document.createElementNS(
+            "https://www.w3.org/2000/svg",
+            "svg"
+          );
           return t && t.style
             ? ((t.style.position = "absolute"),
               (t.style.opacity = "0.01"),
