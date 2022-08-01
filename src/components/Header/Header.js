@@ -51,7 +51,7 @@ const Header = () => {
     <div
       className={`${container} ${!scrollingUp && !isTop && down} ${
         scrollingUp && up
-      } ${menuOpen && extraPadding}`}
+      } ${!isMobile && menuOpen && extraPadding}`}
     >
       <Logo />
       {isMobile && <MenuIcon />}
