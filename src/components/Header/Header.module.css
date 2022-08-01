@@ -1,6 +1,28 @@
 .container {
+  width: 100%;
   font-size: clamp(2rem, 5vw, 6rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 2rem;
+  background-color: var(--background);
+  backdrop-filter: blur(10px);
+  transition: transform ease 0.3s;
+  transform: translateY(0%);
+  position: fixed;
+  z-index: 10;
+}
+
+.down {
+  transform: translateY(-100%);
+}
+
+.up {
+  position: fixed;
+  transform: translateY(0%);
+  background-color: var(--background-light);
+}
+
+.extraPadding {
+  padding-right: calc(2rem + 13px);
 }
