@@ -15,7 +15,6 @@ function App() {
   const handleMenuToggle = (close) => {
     close === true ? setMenuOpen(false) : setMenuOpen(!menuOpen);
     document.querySelector("body").classList.toggle("blur");
-    console.log(isMobile);
     if (!isMobile)
       window.document
         .querySelector("html")
@@ -30,7 +29,7 @@ function App() {
   return (
     <div onClick={handleClickOutside} className={container}>
       <MenuContext.Provider value={{ menuOpen, handleMenuToggle }}>
-        <Header />
+        <Header isActuallyMobile={isMobile} />
         <Hero />
         <Content />
         <Menu />

@@ -6,7 +6,7 @@ import { useScrollDirection } from "use-scroll-direction";
 import styles from "./Header.module.css";
 import { MenuContext } from "../../App";
 
-const Header = () => {
+const Header = ({ isActuallyMobile }) => {
   const { container, down, up, extraPadding } = styles;
   const [isMobile, setIsMobile] = useState(window.innerWidth < 650);
   const [isTop, setIsTop] = useState(true);
@@ -51,7 +51,7 @@ const Header = () => {
     <div
       className={`${container} ${!scrollingUp && !isTop && down} ${
         scrollingUp && up
-      } ${!isMobile && menuOpen && extraPadding}`}
+      } ${!isActuallyMobile && menuOpen && extraPadding}`}
     >
       <Logo />
       {isMobile && <MenuIcon />}
