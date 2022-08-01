@@ -19,7 +19,7 @@ const Header = ({ isActuallyMobile }) => {
   };
 
   const fixUnsetHeader = () => {
-    if (window.scrollY > 80) {
+    if (window.scrollY > 150) {
       setIsTop(false);
     }
 
