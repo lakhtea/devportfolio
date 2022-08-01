@@ -1,4 +1,11 @@
 .container {
   height: calc(100vh - 9rem);
+  padding-top: 9rem;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
 }

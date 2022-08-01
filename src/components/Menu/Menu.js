@@ -3,7 +3,7 @@ import { MenuContext } from "../../App";
 import styles from "./Menu.module.css";
 
 const Menu = () => {
-  const { container, open, list, item, button } = styles;
+  const { container, open, list, item, link } = styles;
   const { menuOpen, handleMenuToggle } = useContext(MenuContext);
 
   const navLinks = [
@@ -20,8 +20,8 @@ const Menu = () => {
           <li key={name} className={`${item} menu-el`}>
             <a
               href={`#${name}`}
-              onClick={() => handleMenuToggle()}
-              className={`${button} menu-el`}
+              onClick={handleMenuToggle}
+              className={`${link} menu-el`}
               disabled={!menuOpen}
             >
               {name}

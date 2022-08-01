@@ -4633,8 +4633,8 @@ export default function Logo() {
   };
 
   return (
-    <button onClick={throttle} className={svgContainer}>
+    <a href="#Hero" onClick={throttle} className={svgContainer}>
       {SVGs[SVG]}
-    </button>
+    </a>
   );
 }

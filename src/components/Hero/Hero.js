@@ -1,9 +1,13 @@
 import styles from "./Hero.module.css";
 
 const Hero = () => {
-  const { container } = styles;
+  const { container, message } = styles;
 
-  return <div className={container}></div>;
+  return (
+    <div id="Hero" className={`${container} hero`}>
+      <div className={message}>Hero</div>
+    </div>
+  );
 };
 
 export default Hero;
