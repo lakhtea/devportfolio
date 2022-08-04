@@ -9,16 +9,15 @@
 }
 
 .name {
-  font-size: 7rem;
+  font-size: min(15vw, 10rem);
   font-weight: 200;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .sub {
-  font-size: 3rem;
+  font-size: min(10vw, 3rem);
   font-weight: 200;
   color: rgb(180, 180, 180);
-  /* letter-spacing: 0.5px; */
   font-family: var(--clickable);
   color: var(--link);
 }

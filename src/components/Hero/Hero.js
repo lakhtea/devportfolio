@@ -27,12 +27,30 @@ const Hero = () => {
         </a>
       </p>
       <div className={icons}>
-        <a href="https://www.ltvco.com/" target="_blank" rel="noreferrer">
+        <a
+          className={link}
+          href="https://github.com/lakhtea"
+          target="_blank"
+          rel="noreferrer"
+        >
           <GitHubIcon className={icon} />
         </a>
-
-        <LinkedInIcon className={icon} />
-        <EmailIcon className={icon} />
+        <a
+          className={link}
+          href="https://www.linkedin.com/in/lakhte-agha-1909b11b2/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <LinkedInIcon className={icon} />
+        </a>
+        <a
+          className={link}
+          href="mailto: lakhteagha@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <EmailIcon className={icon} />
+        </a>
       </div>
     </div>
   );
