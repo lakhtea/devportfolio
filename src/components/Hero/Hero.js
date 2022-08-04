@@ -34,6 +34,7 @@ const Hero = () => {
           rel="noreferrer"
         >
           <GitHubIcon className={icon} />
+          <span>GitHub</span>
         </a>
         <a
           className={link}
@@ -42,6 +43,7 @@ const Hero = () => {
           rel="noreferrer"
         >
           <LinkedInIcon className={icon} />
+          <span>LinkedIn</span>
         </a>
         <a
           className={link}
@@ -50,6 +52,7 @@ const Hero = () => {
           rel="noreferrer"
         >
           <EmailIcon className={icon} />
+          <span>Email</span>
         </a>
       </div>
     </div>

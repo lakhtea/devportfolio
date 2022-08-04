@@ -45,12 +45,14 @@ body {
 }
 
 body .content > *:not(.menu),
-body.blur .hero {
-  transition: filter ease 0.5s;
+body .hero > * {
+  transition: filter ease 1s;
+  filter: blur(0px) brightness(1);
 }
 
 body.blur .content > *:not(.menu),
 body.blur .hero > * {
+  transition: filter ease 0.5s;
   filter: blur(5px) brightness(0.3);
 }
 
