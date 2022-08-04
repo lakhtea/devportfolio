@@ -44,7 +44,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body .content > *:not(.menu) {
+body .content > *:not(.menu),
+body.blur .hero {
   transition: filter ease 0.5s;
 }
 
@@ -86,6 +87,18 @@ a {
 a:hover,
 button:hover {
   box-shadow: 0 0 10px 5px var(--link);
+}
+
+@media screen and (max-width: 30rem) {
+  a:hover,
+  button:hover {
+    box-shadow: none;
+  }
+
+  a:active,
+  button:active {
+    box-shadow: 0 0 10px 5px var(--link);
+  }
 }
 
 button:disabled:hover {
