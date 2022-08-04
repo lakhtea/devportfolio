@@ -1,11 +1,76 @@
 .container {
   height: calc(100vh - 9rem);
-  padding-top: 9rem;
+  padding: 9rem 4rem 0;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  gap: 5rem;
 }
 
-.message {
+.name {
+  font-size: 7rem;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+}
+
+.sub {
+  font-size: 3rem;
+  font-weight: 200;
+  color: rgb(180, 180, 180);
+  /* letter-spacing: 0.5px; */
+  font-family: var(--clickable);
+  color: var(--link);
+}
+
+.blurb {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  color: rgb(180, 180, 180);
+}
+
+.link {
+  color: var(--link);
+  padding: 0;
+}
+
+.link:hover {
+  box-shadow: none;
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 2px;
+}
+
+.icons {
+  color: white;
+  display: flex;
+  gap: 2rem;
+}
+
+.icon {
+  font-size: 5rem !important;
+  color: var(--link);
+}
+
+.sub {
+  animation: typing 2s steps(18), blink 0.5s step-end alternate infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1px solid;
+  font-family: monospace;
+  width: 18ch;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
