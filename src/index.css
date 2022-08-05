@@ -69,6 +69,21 @@ body.blur {
   -webkit-tap-highlight-color: transparent;
 }
 
+h1 {
+  color: var(--link);
+  position: relative;
+  padding-block: 1rem;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: clamp(50vw, 100%, 100rem);
+  background-color: var(--link);
+  border-radius: 10rem;
+}
+
 a {
   text-decoration: none;
 }

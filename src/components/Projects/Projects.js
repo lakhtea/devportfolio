@@ -63,16 +63,20 @@ const Projects = () => {
   return (
     <ul id="Projects" className={container}>
       {projects.map(
-        ({ imgSrc, title, description, technologies, mainColor }) => (
-          <li style={{ borderColor: mainColor }} className={card}>
+        ({ imgSrc, title, description, technologies, mainColor }, i) => (
+          <li style={{ borderColor: mainColor }} className={card} key={i}>
             <img className={img} src={imgSrc} alt={title} />
             <span className={heading}>{title}</span>
             <p className={desc}>{description}</p>
             <hr className={hr} />
             <p className={subheading}>Technologies used:</p>
             <div className={tabs}>
-              {technologies?.map((technology) => (
-                <div style={{ backgroundColor: mainColor }} className={tab}>
+              {technologies?.map((technology, i) => (
+                <div
+                  style={{ backgroundColor: mainColor }}
+                  className={tab}
+                  key={i}
+                >
                   {technology}
                 </div>
               ))}

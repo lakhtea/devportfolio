@@ -1,5 +1,62 @@
 .container {
+  height: calc(100vh);
+  padding-inline: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5%;
+
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  color: rgb(180, 180, 180);
 }
 
-.about {
+.headline {
+  color: var(--link);
+  font-size: 1.75rem;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.resume {
+  font-family: var(--clickable);
+  color: var(--link);
+  width: fit-content;
+  font-size: 1.75rem;
+  padding: 1rem;
+}
+
+.avatarContainer {
+  align-self: center;
+  position: relative;
+  display: flex;
+  width: min(50%, 50rem);
+}
+
+.avatarContainer:hover .avatarShadow {
+  background-color: var(--link);
+}
+
+.avatarShadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  background-color: var(--light);
+  z-index: -1;
+  border-radius: 1rem;
+  transition: ease 0.5s;
+}
+
+.avatar {
+  width: 100%;
+  border-radius: 1rem;
 }

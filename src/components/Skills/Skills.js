@@ -1,41 +1,27 @@
 import styles from "./Skills.module.css";
 
 const Skills = () => {
-  const { technologies, grid, item } = styles;
+  const { technologies, column, columnHeader, item } = styles;
 
-  const frontend = ["React", "HTML", "CSS"];
-  const backend = ["Node.js", "Ruby", "Python"];
-  const other = ["AWS", "Heroku", "Webpack"];
+  const skills = [
+    { type: "Frontend", technologies: ["React.js", "TypeScript", "Ember.js"] },
+    { type: "Backend", technologies: ["Node.js", "Ruby", "Python"] },
+    { type: "Database", technologies: ["SQL", "NoSQL", "GraphQL"] },
+    { type: "Other", technologies: ["AWS", "Redux", "Git"] },
+  ];
 
   return (
-    <div id="Skills">
-      Technologies:
-      <div className={technologies}>
-        <div>
-          <span>Frontend</span>
-          <div className={grid}>
-            {frontend.map((technology) => (
-              <div className={item}>{technology}</div>
-            ))}
-          </div>
+    <div className={technologies} id="Skills">
+      {skills.map(({ type, technologies }, i) => (
+        <div key={i} className={column}>
+          <div className={columnHeader}>{type}</div>
+          {technologies.map((technology, i) => (
+            <div key={i} className={item}>
+              {technology}
+            </div>
+          ))}
         </div>
-        <div>
-          <span>Backend</span>
-          <div className={grid}>
-            {backend.map((technology) => (
-              <div className={item}>{technology}</div>
-            ))}
-          </div>
-        </div>
-        <div>
-          <span>Other technologies</span>
-          <div className={grid}>
-            {other.map((technology) => (
-              <div className={item}>{technology}</div>
-            ))}
-          </div>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };
