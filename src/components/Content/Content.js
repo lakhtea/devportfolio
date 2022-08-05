@@ -5,7 +5,7 @@ import Skills from "../Skills/Skills";
 
 const Content = ({ page }) => {
   const { container } = styles;
-  const components = [<About />, <Projects />, <Skills />];
+  const components = [<About />, <Projects />];
 
   return (
     <div className={`${container} content`}>

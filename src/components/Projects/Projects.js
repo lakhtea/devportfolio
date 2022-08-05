@@ -1,15 +1,23 @@
 import styles from "./Projects.module.css";
+import Bootube from "../../assets/bootube.gif";
 import Infit from "../../assets/in-fit.gif";
 import AV from "../../assets/audio-visualizer.gif";
 
-import Pic from "../../assets/pic.png";
-
 const Projects = () => {
-  const { container, card, img, heading, desc, hr, subheading, tabs, tab } =
-    styles;
+  const {
+    container,
+    projectList,
+    project,
+    title,
+    img,
+    link,
+    description,
+    technologies,
+    tab,
+  } = styles;
   const projects = [
     {
-      imgSrc: Pic,
+      imgSrc: Bootube,
       title: "Bootube",
       description:
         "Built to be a Youtube clone, Bootube allows for video streaming, uploading, commenting, and sharing.",
@@ -24,6 +32,7 @@ const Projects = () => {
       ],
       mainColor: "#ff0000",
       backgroundColor: "#ffd0d1",
+      link: "https://bootube.herokuapp.com/#/",
     },
     {
       imgSrc: Infit,
@@ -42,6 +51,7 @@ const Projects = () => {
       ],
       mainColor: "#ff684e",
       backgroundColor: "#ffe1dd",
+      link: "http://in-fit.herokuapp.com/#/",
     },
     {
       imgSrc: AV,
@@ -57,35 +67,38 @@ const Projects = () => {
       ],
       mainColor: "#752B90",
       backgroundColor: "#e7dceb",
+      link: "https://lakhtea.github.io/audio-visualizer/",
     },
   ];
 
   return (
-    <ul id="Projects" className={container}>
-      {projects.map(
-        ({ imgSrc, title, description, technologies, mainColor }, i) => (
-          <li style={{ borderColor: mainColor }} className={card} key={i}>
-            <img className={img} src={imgSrc} alt={title} />
-            <span className={heading}>{title}</span>
-            <p className={desc}>{description}</p>
-            <hr className={hr} />
-            <p className={subheading}>Technologies used:</p>
-            <div className={tabs}>
-              {technologies?.map((technology, i) => (
-                <div
-                  style={{ backgroundColor: mainColor }}
-                  className={tab}
-                  key={i}
-                >
-                  {technology}
-                </div>
+    <div id="Projects" className={container}>
+      <h1>Projects</h1>
+      <ul className={projectList}>
+        {projects.map((item) => (
+          <li id={item.title} className={project} key={item.title}>
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noreferrer"
+              className={link}
+            >
+              <img className={img} src={item.imgSrc} alt={item.title} />
+              <h2 className={title}>{item.title}</h2>
+            </a>
+            <p className={description}>{item.description}</p>
+            <div className={technologies}>
+              {item.technologies.map((technology) => (
+                <div className={tab}>{technology}</div>
               ))}
             </div>
           </li>
-        )
-      )}
-      <li className={card}>More to come!</li>
-    </ul>
+        ))}
+        <li className={project}>
+          <h2 className={title}>More to come!</h2>
+        </li>
+      </ul>
+    </div>
   );
 };
 
