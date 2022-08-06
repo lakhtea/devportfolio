@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  padding-inline: 10%;
+  padding: 10%;
 
   font-size: 1.5rem;
   font-weight: 400;
@@ -30,6 +30,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  position: relative;
 }
 
 .img {
@@ -43,6 +44,10 @@
   align-items: center;
 }
 
+.link:hover {
+  box-shadow: none;
+}
+
 .technologies {
   display: flex;
   flex-wrap: wrap;
@@ -54,4 +59,34 @@
   border-radius: 1rem;
   background-color: var(--link);
   color: black;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footerContent {
+  color: var(--link);
+  font-family: var(--clickable);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  position: relative;
+}
+
+.footerContent:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--link);
+  border-radius: 1rem;
+}
+
+.disclaimer {
+  color: white;
+  font-weight: 600;
 }

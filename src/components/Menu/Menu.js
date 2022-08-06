@@ -1,9 +1,23 @@
 import { useContext } from "react";
 import { MenuContext } from "../../App";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
 import styles from "./Menu.module.css";
 
 const Menu = () => {
-  const { container, open, list, item, link, innerItems, innerLink } = styles;
+  const {
+    container,
+    open,
+    list,
+    item,
+    link,
+    innerItems,
+    innerLink,
+    contact,
+    icons,
+    icon,
+  } = styles;
   const { menuOpen, handleMenuToggle } = useContext(MenuContext);
 
   const navLinks = [
@@ -41,6 +55,38 @@ const Menu = () => {
             </ul>
           </li>
         ))}
+        <li className={`${item} ${contact} menu-el`}>
+          <span>Contact me!</span>
+          <div className={icons}>
+            <a
+              className={link}
+              href="https://github.com/lakhtea"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GitHubIcon className={icon} />
+              <span>GitHub</span>
+            </a>
+            <a
+              className={link}
+              href="https://www.linkedin.com/in/lakhte-agha-1909b11b2/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedInIcon className={icon} />
+              <span>LinkedIn</span>
+            </a>
+            <a
+              className={link}
+              href="mailto: lakhteagha@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <EmailIcon className={icon} />
+              <span>Email</span>
+            </a>
+          </div>
+        </li>
       </ul>
     </div>
   );

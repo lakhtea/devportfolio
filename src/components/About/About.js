@@ -1,7 +1,6 @@
 import styles from "./About.module.css";
 import Skills from "../Skills/Skills";
 import Avatar from "../../assets/avatar.jpeg";
-import Resume from "../../assets/LakhteAghaResume.pdf";
 
 const About = () => {
   const {
@@ -10,7 +9,6 @@ const About = () => {
     headline,
     skills,
     skillsHeader,
-    resume,
     avatar,
     avatarContainer,
     avatarShadow,
@@ -24,10 +22,10 @@ const About = () => {
       </div>
       <p className={start}>
         <span className={headline}>My interest in development</span> began with
-        building games and animations using variables and loops. I realized then
-        that I enjoy creating with code. Today I'm happy to say that interest
-        has turned me into a Fullstack Software Developer, with a focus on
-        building reliable, accessible, and great looking websites.
+        building games and animations using variables and loops. Today I use
+        cutting edge technologies and my expertise on full-stack development to
+        create visually interesting and effecient web components and
+        applications.
       </p>
       <div className={skills}>
         <p className={skillsHeader}>
@@ -36,9 +34,13 @@ const About = () => {
         </p>
         <Skills />
       </div>
-      <a href={Resume} className={resume} download>
-        Download my resume here!
-      </a>
+      <p className={start}>
+        <span className={headline}>
+          Outside of my work as a software engineer,
+        </span>{" "}
+        I'm into weightlifting, binging TV shows and movies, and spending the
+        day exploring the outdoors with friends.
+      </p>
     </div>
   );
 };

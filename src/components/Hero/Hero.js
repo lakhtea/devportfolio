@@ -1,10 +1,8 @@
 import styles from "./Hero.module.css";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import EmailIcon from "@mui/icons-material/Email";
+import Resume from "../../assets/LakhteAghaResume.pdf";
 
 const Hero = () => {
-  const { container, name, sub, blurb, link, icons, icon } = styles;
+  const { container, name, sub, blurb, link, resume } = styles;
 
   return (
     <div id="Hero" className={`${container} hero`}>
@@ -26,35 +24,9 @@ const Hero = () => {
           The Lifetime Value Co.
         </a>
       </p>
-      <div className={icons}>
-        <a
-          className={link}
-          href="https://github.com/lakhtea"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <GitHubIcon className={icon} />
-          <span>GitHub</span>
-        </a>
-        <a
-          className={link}
-          href="https://www.linkedin.com/in/lakhte-agha-1909b11b2/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <LinkedInIcon className={icon} />
-          <span>LinkedIn</span>
-        </a>
-        <a
-          className={link}
-          href="mailto: lakhteagha@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <EmailIcon className={icon} />
-          <span>Email</span>
-        </a>
-      </div>
+      <a href={Resume} className={resume} download>
+        Download my resume here!
+      </a>
     </div>
   );
 };
