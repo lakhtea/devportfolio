@@ -1,7 +1,6 @@
 import styles from "./Content.module.css";
 import About from "../About/About";
 import Projects from "../Projects/Projects";
-import Skills from "../Skills/Skills";
 
 const Content = ({ page }) => {
   const { container } = styles;
