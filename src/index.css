@@ -8,8 +8,7 @@
 }
 
 html,
-body,
-#root {
+body {
   height: 100%;
   font-size: 62.5%;
   color: var(--text);
@@ -99,6 +98,7 @@ a {
   cursor: pointer;
   padding: 1rem;
   border-radius: 0.5rem;
+  position: relative;
 }
 
 a:hover,

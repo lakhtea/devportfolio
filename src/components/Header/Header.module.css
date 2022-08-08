@@ -1,6 +1,5 @@
 .container {
   width: 100%;
-  font-size: clamp(2rem, 5vw, 6rem);
   display: flex;
   justify-content: space-between;
   align-items: center;

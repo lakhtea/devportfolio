@@ -1,6 +1,23 @@
-.list {
+.container {
+  font-size: clamp(1rem, 2vw, 3rem);
+  color: var(--link);
+  font-family: var(--clickable);
+}
+
+.list,
+.icons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: clamp(1rem, 2vw, 3rem) !important;
 }
