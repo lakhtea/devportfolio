@@ -90,3 +90,9 @@
   color: white;
   font-weight: 600;
 }
+
+@media screen and (min-width: 50em) {
+  .container {
+    padding-inline: 30vw;
+  }
+}
