@@ -29,7 +29,7 @@
   align-self: center;
   position: relative;
   display: flex;
-  width: min(50%, 50rem);
+  width: 50%;
 }
 
 .avatarContainer:hover .avatarShadow {
@@ -51,4 +51,17 @@
 .avatar {
   width: 100%;
   border-radius: 1rem;
+}
+
+@media screen and (min-width: 50em) {
+  .container {
+    padding-inline: 30vw;
+  }
+
+  .avatarContainer {
+    align-self: center;
+    position: relative;
+    display: flex;
+    width: 30%;
+  }
 }

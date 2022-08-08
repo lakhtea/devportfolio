@@ -78,7 +78,7 @@ h1::before {
   content: "";
   position: absolute;
   height: 3px;
-  width: clamp(50vw, 100%, 100rem);
+  width: 100%;
   background-color: var(--link);
   border-radius: 10rem;
 }

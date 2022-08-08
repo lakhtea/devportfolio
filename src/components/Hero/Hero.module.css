@@ -1,7 +1,7 @@
 .container {
   height: calc(100vh);
   font-size: clamp(1rem, 1vw, 1.5rem);
-  padding-inline: 4em;
+  padding-inline: 10%;
   width: 100%;
   display: flex;
   flex-direction: column;
