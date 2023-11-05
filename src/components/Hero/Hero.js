@@ -1,8 +1,7 @@
 import styles from "./Hero.module.css";
-import Resume from "../../assets/LakhteAghaResume.pdf";
 
 const Hero = () => {
-  const { container, name, sub, blurb, link, resume } = styles;
+  const { container, name, sub, blurb, link } = styles;
 
   return (
     <div id="Hero" className={`${container} hero`}>
@@ -24,9 +23,6 @@ const Hero = () => {
           The Lifetime Value Co.
         </a>
       </p>
-      <a href={Resume} className={resume} download>
-        Download my resume here!
-      </a>
     </div>
   );
 };

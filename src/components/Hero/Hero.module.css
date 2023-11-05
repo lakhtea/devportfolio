@@ -70,14 +70,6 @@
   color: rgb(180, 180, 180);
 }
 
-.resume {
-  font-family: var(--clickable);
-  color: var(--link);
-  width: fit-content;
-  font-size: 1.75em;
-  padding: 1em;
-}
-
 @media screen and (min-width: 50em) {
   .container {
     padding-inline: 30vw;
